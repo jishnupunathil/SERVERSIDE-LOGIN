@@ -5,11 +5,11 @@ const bodyparser = require("body-parser");
 const session = require("express-session");
 const { v4: uuidv4 } = require("uuid");
 
-const router = require('./router');
+const router = require('./routes/router');
 
 const app = express();
 
-const port = process.env.PORT || 5000;
+const port = process.env.PORT || 5005;
 
 app.use(bodyparser.json());
 app.use(bodyparser.urlencoded({ extended: true }))
@@ -33,9 +33,4 @@ app.use(session({
 
 app.use('/', router);
 
-// app.get('/', (req, res) =>{
-//     res.render('base', { title : "Login System"});
-// })
-
-
-app.listen(port, ()=>{ console.log("Listening to the server on\n http://localhost:5000")}); 
+app.listen(port, ()=>{ console.log("Listening to the server on\n http://localhost:5005")}); 
