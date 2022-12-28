@@ -19,7 +19,7 @@ $(document).ready(function () {
           required: true,
           email: true,
         },
-        pass: {
+        password: {
           required: true,
           minlength: 5,
           maxlength: 15,
@@ -29,7 +29,7 @@ $(document).ready(function () {
         email: {
           email: "Please enter a valid Email id",
         },
-        pass: {
+        password: {
           minlength: "too Short!",
           maxlength: "too large",
         },

@@ -69,7 +69,7 @@ router.get('/dashboard', (req, res) => {
   if (req.session?.loggedIn) {
     res.render('dashboard', { user: req.session.user, samsung })
   } else {
-    res.render('unauthorizedentry')
+    res.redirect('/')
   }
 })
 
