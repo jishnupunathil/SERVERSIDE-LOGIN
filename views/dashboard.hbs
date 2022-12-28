@@ -1,10 +1,22 @@
-<nav class="navbar navbar-light bg-light justify-content-center">
-  <a href="/logout">LOGOUT</a>
+
+<div style="background-color: #ced4da7d;">
+<nav class="navbar navbar-expand-lg navbar-light bg-dark algn">
+    <div class="col-6">
+  <a class="navbar-brand text-white" href="#">SAMSUNG MOBILES</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  </div>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent col-6" style="flex-direction: row-reverse">
+      <a href="/logout"><button class="btn btn-danger my-2 my-sm-0">Log Out</button></a>
+  </div>
 </nav>
 <div class="container">
+
   <div class="row">
-    {{#each sumsung}}
+    {{#each samsung}}
       <div class="col-lg-4 col-md-6 col-sm-12">
+
         <div class="card m-4" style="width: 21rem;">
           <img
             src={{this.image}}
@@ -15,10 +27,13 @@
           <div class="card-body">
             <h5 class="card-title">{{this.name}}</h5>
             <p class="card-text">{{this.para}}</p>
-            <a href="#" class="btn btn-primary">Read More</a>
+            <a href="#" class="btn btn-primary">In Stock</a>
           </div>
         </div>
+
       </div>
     {{/each}}
   </div>
+
+</div>
 </div>

@@ -6,7 +6,7 @@ const credential = {
   password: "12345"
 }
 
-const sumsung = [
+const samsung = [
   {
     name: "Samsung Galaxy S22 Ultra",
     price: "Rs.1,09,999",
@@ -67,7 +67,7 @@ router.get('/', (req, res) => {
 
 router.get('/dashboard', (req, res) => {
   if (req.session?.loggedIn) {
-    res.render('dashboard', { user: req.session.user, sumsung })
+    res.render('dashboard', { user: req.session.user, samsung })
   } else {
     res.render('unauthorizedentry')
   }
