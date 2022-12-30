@@ -45,13 +45,19 @@ const samsung = [
   },
 
 ]
+
+
+
 router.post('/login', (req, res) => {
+  
   if (req.body.email == credential.email && req.body.password == credential.password) {
     req.session.user = req.body.email;
     req.session.loggedIn = true
     res.redirect('/dashboard');
-  } else {
-    res.send("Invalid Username")
+  } else  {
+    req.session.userLoginErr="Invalid Login Credential"
+    res.render('index',{"loginErr":req.session.userLoginErr})
+    req.session.userLoginErr=false
   }
 });
 
